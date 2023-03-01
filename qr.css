@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(7, 7, 61);
+}
+.wrapper{
+    background: #fff;
+    max-width: 410px;
+    height: 245px;
+    border-radius: 7px;
+    padding: 2em;
+    transition: 0.2s ease;
+}
+.wrapper.active{
+    height: 500px;
+    background: #fff;
+}
+.heading{
+    font-size: 23px;
+    font-weight: 600;
+}
+.wrapper .form{
+    margin: 2px 0 30px;
+}
+.form :where(input,button){
+    width: 100%;
+    height: 3em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 2px solid rgb(31, 21, 21);
+}
+.form button{
+    background: #3498DB;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #f2f2f2;
+}
+.wrapper .qrc{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 35px 0;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper.active .qrc{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
